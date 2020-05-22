@@ -6,7 +6,7 @@ import androidx.annotation.NonNull; import androidx.annotation.Nullable; import 
 
 @Entity(tableName = "playlist")
 
-class Playlist {
+public class PlayList {
 
 @PrimaryKey(autoGenerate = true)
 @NonNull
@@ -18,10 +18,12 @@ private int playlistId;
 private String playlistTitle;
 
 private String playlistSinger;
+// observo que este erro seu foi também de varios colegas. usaram o mesmo nome de construtor
+// o construtor Donation foi para o Sergio
 
-public Donation(@Nullable String title, String singer, int score, String creationDate) {
+public PlayList(@Nullable String title, String singer, int score, String creationDate) {
     playlistTitle = title;
-    playlistSinger = Singer;
+    playlistSinger = singer;
     playlistScore = score;
     playlistCreationDate = creationDate;
 }
